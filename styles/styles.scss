@@ -1,0 +1,258 @@
+
+$TopColorButtonText:#fff;
+$ButtonColor:#686de0;
+$BackgroundColor: #c3cfe2;
+
+
+@import "./mixing";
+
+@mixin SizeColor ($size, $color){
+    color: $color;
+    font-size: $size;
+}
+@mixin FlexDir ($direct) {
+    display: flex;
+    flex-direction: $direct;
+    align-items: center;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+body{
+    background-color: $BackgroundColor;
+   
+}
+.break{
+    height: 5px;
+    width: 100%;
+    background-color: black;
+}
+.break-last{
+    margin-top: 300px;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    
+}
+.top{
+    border-radius: 10% 10% 0 0;
+    height: 430px;
+    background-color: $TopColorButtonText;
+    margin: 10px 20px 0px 20px;
+    p{
+        font-size: 3ch;
+        padding: 10%;
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 1.6;
+    }
+    img{
+        height: auto;
+        width: 140px;
+        border-radius: 90%;
+        border: 6px white solid;
+        position: absolute;
+        top:380px;
+        left:33.3%;
+    }
+}
+.button{
+    border-radius: 0 0 10% 10%;
+    background-color: $ButtonColor;
+    margin: 0px 20px 10px 20px;
+    height: 250px;
+    text-align: center;
+     ul{
+        padding-top: 130px;
+        li:nth-child(1){
+            @include SizeColor(3.5ch, $TopColorButtonText);
+          text-transform: uppercase;
+    }
+        li:last-child {
+            @include SizeColor (2.5ch, $BackgroundColor);
+          margin-top: 10px;
+          
+    }
+     }   
+}
+.folio-grid{
+    @include FlexDir(column);
+    margin-top: 50px;
+    .image{
+        margin:10px;
+        position: relative;
+        width: 400px;
+        img{
+            display: block;
+            width: 100%;
+        }
+    }        
+    .img-overlay {
+           position: absolute;
+           text-align: center;
+           top:0;
+           left:0;
+           width: 100%;
+           height: 100%;
+           background: black;
+           opacity: 0;
+           transition: 350ms opacity ease-in-out;
+           &:hover {
+               opacity: 1;
+           }
+           button{
+            padding: 10px;
+            font-size:5ch;
+            transform: translateY(180px);
+           }
+        }
+}
+.nav{
+    position: absolute;
+    right: 0px;
+    top: 3940px;
+    transform: translateX(180px);
+    .blog{
+        @include Button($BlogColor);
+        &::before{
+            @include Icons("\f5fc");
+            
+        }
+        &:hover{
+            transform: translateX(-180px);
+        }
+        span{
+            @include ContMes($BlogColor);
+            p{
+                @include Message();
+                
+            }
+        }
+    }
+    .twitter{
+        @include Button($twitterColor);
+        &::before{
+            @include Icons("\f099");
+        }
+        &:hover{
+            transform: translateX(-180px);
+        }
+        span{
+            @include ContMes($twitterColor); 
+            p{
+                @include Message();
+                
+            }
+        }
+    }
+    .linkedin{
+        @include Button($LinkedinColor);
+        &::before{
+            @include Icons("\f5fc");
+        }
+        &:hover{
+            transform: translateX(-180px);
+        }
+        span{
+            @include ContMes($LinkedinColor); 
+            p{
+                @include Message();
+                
+            }
+        }
+    }
+    .facebook{
+        @include Button($facebookColor);
+        &::before{
+            @include Icons("\f5fc");
+        }
+        &:hover{
+            transform: translateX(-180px);
+        }
+        span{
+            @include ContMes($facebookColor); 
+            p{
+                @include Message();
+                
+            }
+        }
+    }
+    .github{
+        @include Button($GitHubColor);
+        &::before{
+            @include Icons("\f5fc");
+        }
+        &:hover{
+            transform: translateX(-180px);
+        }
+        span{
+            @include ContMes($GitHubColor); 
+            p{
+                @include Message();
+                
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+   body{
+       background-color: red;
+   }
+   .top{
+    border-radius: 7.5% 7.5% 0 0;
+       p{
+        font-size: 4ch;
+       }
+       img{
+        left:40%;
+       }
+   }
+   .button{
+    border-radius: 0 0 7.5% 7.5%;
+   }
+   .folio-grid{
+    @include FlexDir(row);
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .image{
+        width: 400px;
+    }
+   } 
+   .nav{
+       top:2600px;
+   }
+}
+
+  @media only screen and (min-width: 1200px) {
+    body{
+        background-color: green;
+    }
+    .top{
+        border-radius: 5% 5% 0 0;
+        p{
+            font-size: 5ch;
+           }
+        img{
+         left: 45%;
+        }
+    }
+    .button{
+        border-radius: 0 0 5% 5%;
+    }
+    .folio-grid{
+        @include FlexDir(row);
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        .image{
+            width: 440px;
+        }
+    }
+    .nav{
+        top:2300px;
+    }
+  }
+

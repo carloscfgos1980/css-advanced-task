@@ -1,0 +1,452 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+body {
+  background-color: #c3cfe2;
+}
+
+.break {
+  height: 5px;
+  width: 100%;
+  background-color: black;
+}
+
+.break-last {
+  margin-top: 300px;
+  height: 100px;
+  width: 100%;
+  background-color: black;
+}
+
+.top {
+  border-radius: 10% 10% 0 0;
+  height: 430px;
+  background-color: #fff;
+  margin: 10px 20px 0px 20px;
+}
+
+.top p {
+  font-size: 3ch;
+  padding: 10%;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.6;
+}
+
+.top img {
+  height: auto;
+  width: 140px;
+  border-radius: 90%;
+  border: 6px white solid;
+  position: absolute;
+  top: 380px;
+  left: 33.3%;
+}
+
+.button {
+  border-radius: 0 0 10% 10%;
+  background-color: #686de0;
+  margin: 0px 20px 10px 20px;
+  height: 250px;
+  text-align: center;
+}
+
+.button ul {
+  padding-top: 130px;
+}
+
+.button ul li:nth-child(1) {
+  color: #fff;
+  font-size: 3.5ch;
+  text-transform: uppercase;
+}
+
+.button ul li:last-child {
+  color: #c3cfe2;
+  font-size: 2.5ch;
+  margin-top: 10px;
+}
+
+.folio-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+.folio-grid .image {
+  margin: 10px;
+  position: relative;
+  width: 400px;
+}
+
+.folio-grid .image img {
+  display: block;
+  width: 100%;
+}
+
+.folio-grid .img-overlay {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  -webkit-transition: 350ms opacity ease-in-out;
+  transition: 350ms opacity ease-in-out;
+}
+
+.folio-grid .img-overlay:hover {
+  opacity: 1;
+}
+
+.folio-grid .img-overlay button {
+  padding: 10px;
+  font-size: 5ch;
+  -webkit-transform: translateY(180px);
+          transform: translateY(180px);
+}
+
+.nav {
+  position: absolute;
+  right: 0px;
+  top: 3940px;
+  -webkit-transform: translateX(180px);
+          transform: translateX(180px);
+}
+
+.nav .blog {
+  background-color: #e17b77;
+  position: relative;
+  right: 0;
+  width: 220px;
+  height: 40px;
+  -webkit-transition: .5s transform ease-out;
+  transition: .5s transform ease-out;
+}
+
+.nav .blog::before {
+  position: absolute;
+  font-family: "Font Awesome 5 Brands";
+  left: 10px;
+  top: 10px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  color: white;
+  content: "";
+}
+
+.nav .blog:hover {
+  -webkit-transform: translateX(-180px);
+          transform: translateX(-180px);
+}
+
+.nav .blog span {
+  background-color: #e17b77;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  left: 40px;
+  height: 100%;
+  width: 100px;
+}
+
+.nav .blog span p {
+  color: white;
+  font-size: 1.6ch;
+  text-decoration: underline;
+  text-align: left;
+  line-height: 35px;
+  height: 100%;
+  width: 150px;
+  padding: 0 50px;
+}
+
+.nav .twitter {
+  background-color: #00aced;
+  position: relative;
+  right: 0;
+  width: 220px;
+  height: 40px;
+  -webkit-transition: .5s transform ease-out;
+  transition: .5s transform ease-out;
+}
+
+.nav .twitter::before {
+  position: absolute;
+  font-family: "Font Awesome 5 Brands";
+  left: 10px;
+  top: 10px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  color: white;
+  content: "";
+}
+
+.nav .twitter:hover {
+  -webkit-transform: translateX(-180px);
+          transform: translateX(-180px);
+}
+
+.nav .twitter span {
+  background-color: #00aced;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  left: 40px;
+  height: 100%;
+  width: 100px;
+}
+
+.nav .twitter span p {
+  color: white;
+  font-size: 1.6ch;
+  text-decoration: underline;
+  text-align: left;
+  line-height: 35px;
+  height: 100%;
+  width: 150px;
+  padding: 0 50px;
+}
+
+.nav .linkedin {
+  background-color: #007bb6;
+  position: relative;
+  right: 0;
+  width: 220px;
+  height: 40px;
+  -webkit-transition: .5s transform ease-out;
+  transition: .5s transform ease-out;
+}
+
+.nav .linkedin::before {
+  position: absolute;
+  font-family: "Font Awesome 5 Brands";
+  left: 10px;
+  top: 10px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  color: white;
+  content: "";
+}
+
+.nav .linkedin:hover {
+  -webkit-transform: translateX(-180px);
+          transform: translateX(-180px);
+}
+
+.nav .linkedin span {
+  background-color: #007bb6;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  left: 40px;
+  height: 100%;
+  width: 100px;
+}
+
+.nav .linkedin span p {
+  color: white;
+  font-size: 1.6ch;
+  text-decoration: underline;
+  text-align: left;
+  line-height: 35px;
+  height: 100%;
+  width: 150px;
+  padding: 0 50px;
+}
+
+.nav .facebook {
+  background-color: #3b5998;
+  position: relative;
+  right: 0;
+  width: 220px;
+  height: 40px;
+  -webkit-transition: .5s transform ease-out;
+  transition: .5s transform ease-out;
+}
+
+.nav .facebook::before {
+  position: absolute;
+  font-family: "Font Awesome 5 Brands";
+  left: 10px;
+  top: 10px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  color: white;
+  content: "";
+}
+
+.nav .facebook:hover {
+  -webkit-transform: translateX(-180px);
+          transform: translateX(-180px);
+}
+
+.nav .facebook span {
+  background-color: #3b5998;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  left: 40px;
+  height: 100%;
+  width: 100px;
+}
+
+.nav .facebook span p {
+  color: white;
+  font-size: 1.6ch;
+  text-decoration: underline;
+  text-align: left;
+  line-height: 35px;
+  height: 100%;
+  width: 150px;
+  padding: 0 50px;
+}
+
+.nav .github {
+  background-color: #333;
+  position: relative;
+  right: 0;
+  width: 220px;
+  height: 40px;
+  -webkit-transition: .5s transform ease-out;
+  transition: .5s transform ease-out;
+}
+
+.nav .github::before {
+  position: absolute;
+  font-family: "Font Awesome 5 Brands";
+  left: 10px;
+  top: 10px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  color: white;
+  content: "";
+}
+
+.nav .github:hover {
+  -webkit-transform: translateX(-180px);
+          transform: translateX(-180px);
+}
+
+.nav .github span {
+  background-color: #333;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  left: 40px;
+  height: 100%;
+  width: 100px;
+}
+
+.nav .github span p {
+  color: white;
+  font-size: 1.6ch;
+  text-decoration: underline;
+  text-align: left;
+  line-height: 35px;
+  height: 100%;
+  width: 150px;
+  padding: 0 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: red;
+  }
+  .top {
+    border-radius: 7.5% 7.5% 0 0;
+  }
+  .top p {
+    font-size: 4ch;
+  }
+  .top img {
+    left: 40%;
+  }
+  .button {
+    border-radius: 0 0 7.5% 7.5%;
+  }
+  .folio-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .folio-grid .image {
+    width: 400px;
+  }
+  .nav {
+    top: 2600px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color: green;
+  }
+  .top {
+    border-radius: 5% 5% 0 0;
+  }
+  .top p {
+    font-size: 5ch;
+  }
+  .top img {
+    left: 45%;
+  }
+  .button {
+    border-radius: 0 0 5% 5%;
+  }
+  .folio-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .folio-grid .image {
+    width: 440px;
+  }
+  .nav {
+    top: 2300px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
